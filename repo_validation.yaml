@@ -1,0 +1,43 @@
+# Repository validation rules for IDOS.
+#
+# Enforced locally via `idos-validate-repo` and in CI
+# (.github/workflows/ci.yml, job: repo-validate).
+#
+# This file is the "PyYAML configuration support" capability for Sprint 5A-R.
+# It configures the repository-validation tool only; it is not the application
+# configuration system (that is Shared Kernel scope, Sprint 5B-R, not yet built).
+
+required_files:
+  - README.md
+  - LICENSE
+  - CLAUDE.md
+  - pyproject.toml
+  - .gitignore
+  - .github/workflows/ci.yml
+  - docs/adr/0001-record-architecture-decisions.md
+
+required_dirs:
+  - docs/adr
+  - docs/requirements
+  - docs/architecture
+  - src/idos
+  - tests
+
+adr:
+  directory: docs/adr
+  minimum_count: 1
+  filename_pattern: "^[0-9]{4}-[a-z0-9-]+\\.md$"
+
+placeholder_markers:
+  scan_paths:
+    - src
+  markers:
+    - TODO
+    - FIXME
+    - XXX
+
+test_parity:
+  source_root: src/idos
+  test_root: tests/unit
+  exclude_names:
+    - __init__.py
