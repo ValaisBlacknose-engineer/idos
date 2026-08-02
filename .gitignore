@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+
+# Test / coverage artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Secrets / local environment overrides -- never commit real credentials
+.env
+.env.*
+!.env.example
+*.secrets.yaml
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
