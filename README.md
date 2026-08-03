@@ -1,7 +1,14 @@
 # IDOS -- Investment Decision Operating System
 
-**A portfolio case study in governed Python engineering, built against a
-realistic institutional investment-platform brief.**
+**This repository proves four things about how it was built: every
+requirement has a stable ID and a real status (a functional and
+non-functional requirements catalogue), every architecture-significant
+decision is written down before it's acted on (ADR discipline), every
+shipped module has a matching test enforced mechanically (1:1
+source-to-test parity), and all of it is gated in CI by
+`idos-validate-repo` rather than asserted in a README. It's a portfolio
+case study in governed Python engineering, built against a realistic
+institutional investment-platform brief.**
 
 > **This is not a real product, client engagement, or investment service.**
 > There is no live market data, no brokerage connectivity, no trade
